@@ -283,3 +283,10 @@ Fork → add to `framework/workflows/` → pull request.
 Format: `Purpose / When to Run / Executed by / Inputs / Steps / Notes`
 
 See `USER_GUIDE.md` for a complete walkthrough of how the system works.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE). Use it, fork it, modify it, ship it. Keep the
+copyright notice in derivatives. No warranty.
