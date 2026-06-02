@@ -31,9 +31,11 @@ If none exist, the workflow is complete — exit.
 
 **2a. Locate the main card**
 
-The card_id in the temp card front-matter identifies the main card.
+The card_id in the temp card front-matter identifies the main card. card_id
+is a logical identifier — `pipeline/<slug>` — without a `data/` prefix. The
+filesystem path is derived by prepending `data/` and appending `.md`.
 
-e.g. card_id: data/pipeline/aether-labs → main card is data/pipeline/aether-labs.md
+e.g. card_id: pipeline/aether-labs → main card file is data/pipeline/aether-labs.md
 
 If the main card does not exist: create it from framework/templates/pipeline-card.md first,
 then proceed with the merge.

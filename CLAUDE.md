@@ -578,11 +578,30 @@ Confirms `data/config/accounts.yaml` is populated and committed before proceedin
 
 **Step 3 — Onboarding sweep** → run `framework/workflows/onboarding-sweep.md` end-to-end.
 Creates pipeline cards, updates `data/manifest.yaml`, auto-researches any active-stage
-companies, commits, and orients the user on next steps.
+companies, commits.
 
-At the end, summarize what was set up: profile lens, count of email/calendar
-accounts connected, count of pipeline cards created, and the single highest-priority
-next action (usually a prep recommendation if an interview is imminent).
+**Step 4 — Kick off the first Brief automatically.** As soon as Step 3 commits,
+run the **Brief** command end-to-end (the full `Brief` flow defined at the top
+of CLAUDE.md — email sweep, calendar read, industry pulse, pipeline health,
+write `data/logs/today/brief.md`, regenerate the dashboard, open it).
+
+Don't make the user ask. Three reasons it must run automatically:
+
+1. **It validates the plumbing under real load.** The accounts smoke test
+   confirmed read+write work; the Brief proves the full sweep+filter+write
+   pipeline works end-to-end with the user's actual cards.
+2. **It populates the dashboard.** Without a Brief, `dashboard.html` is empty
+   even though every pipeline card was written correctly — the user sees an
+   empty UI and thinks setup failed.
+3. **It surfaces day-one action items.** The user just spent ~20 min wiring
+   things up; the natural next thought is "now what?" The Brief answers that
+   with their single highest-priority next action.
+
+After the Brief completes, give a short orientation: profile lens, count of
+email/calendar accounts connected, count of pipeline cards created, and
+the single highest-priority next action (usually a prep recommendation if
+an interview is imminent). The dashboard is already open at this point —
+point the user to it.
 
 ### "Update my accounts" / "Change my calendar" / "Add an email account" / "Set up my accounts"
 
@@ -820,6 +839,17 @@ Every user will have a different config.
 - If new information warrants a profile-aware analysis refresh (new funding,
   product launch, major event), regenerate that section and update
   `last_analysis_updated`.
+
+**Card ID format — logical, not filesystem.** Every `id:` in `data/manifest.yaml`
+and every `card_id:` / `linked_cards:` value in card front-matter is a logical
+identifier: `profile/me`, `pipeline/<slug>`, `learning/<slug>`. **Never prefix
+with `data/`.** Tools and workflows add the `data/` filesystem layer themselves
+(e.g. `generate_dashboard.py` skips any manifest entry that doesn't start with
+exactly `pipeline/` and then prepends `data/` when reading the card file). A
+`data/`-prefixed ID silently drops the card from the dashboard, the Brief's
+card-completeness audit, and every workflow that loads cards by id. Examples
+in `examples/manifest.yaml` and `examples/pipeline/*.md` show the canonical
+format; the templates under `framework/templates/` enforce it.
 
 **Source citation is mandatory for all research-derived content:**
 - Every factual claim written to a company card must include a markdown link

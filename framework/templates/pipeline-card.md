@@ -1,5 +1,5 @@
 ---
-card_id: data/pipeline/company-name      # Replace with: data/pipeline/actual-company-name
+card_id: pipeline/company-name      # Logical ID — NEVER prefix with `data/`. Replace with: pipeline/actual-company-name
 card_type: company_pipeline
 stage: identified                   # identified | researching | applied | screening | interviewing | final_round | decision | closed_won | closed_lost | closed_paused
 priority: high                      # high | medium | archive
@@ -9,7 +9,7 @@ last_updated: null                  # YYYY-MM-DD
 last_analysis_updated: null         # YYYY-MM-DD — date profile-aware analysis was last generated
 last_user_research_updated: null    # YYYY-MM-DD — date User Base & Geography was last populated
 next_action: ""                     # The single most important next step right now
-linked_cards: [data/profile/me]
+linked_cards: [profile/me]
 has_temp: false                     # Set to true by CoWork when a _temp card exists
 ---
 
