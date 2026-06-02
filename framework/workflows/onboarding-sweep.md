@@ -169,7 +169,7 @@ Use this stub structure (fill in what is known, leave research sections blank):
 
 ```markdown
 ---
-card_id: data/pipeline/[company-name]
+card_id: pipeline/[company-name]    # Logical ID — NEVER prefix with `data/`
 card_type: company_pipeline
 stage: [stage]
 priority: [priority]
@@ -178,7 +178,7 @@ last_updated: "[today YYYY-MM-DD]"
 last_analysis_updated: null
 last_user_research_updated: null
 next_action: "[next action]"
-linked_cards: [data/profile/me]
+linked_cards: [profile/me]
 has_temp: false
 ---
 
@@ -249,10 +249,16 @@ When auto-research is complete:
 ### Step 7 — Update data/manifest.yaml
 
 Add an entry for each new company card. Insert under the existing `cards:` list,
-after `data/profile/me` and before any existing pipeline cards:
+after `profile/me` and before any existing pipeline cards.
+
+**Critical: the `id:` field is a logical card identifier, not a filesystem path.**
+Use `pipeline/<slug>` — never `data/pipeline/<slug>`. The dashboard generator
+(`framework/tools/generate_dashboard.py`) skips any manifest entry whose `id`
+doesn't start with exactly `pipeline/`. A `data/` prefix here silently drops
+the card from every dashboard view.
 
 ```yaml
-  - id: data/pipeline/[company-name]
+  - id: pipeline/[company-name]        # NEVER prefix with `data/`
     type: company_pipeline
     stage: [stage]
     summary: "[One-sentence summary: what they do + where the process stands]"
@@ -263,7 +269,7 @@ after `data/profile/me` and before any existing pipeline cards:
     has_temp: false
 ```
 
-Also update `data/profile/me` entry: set `updated` to today's date.
+Also update the `profile/me` entry: set `updated` to today's date.
 
 ### Step 8 — Commit and push
 

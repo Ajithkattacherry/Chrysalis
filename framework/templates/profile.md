@@ -1,5 +1,5 @@
 ---
-card_id: data/profile/me
+card_id: profile/me                  # Logical ID — NEVER prefix with `data/`
 card_type: personal_profile
 priority: always_load
 updated: "YYYY-MM-DD"

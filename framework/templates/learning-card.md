@@ -1,5 +1,5 @@
 ---
-card_id: data/learning/track-name       # Replace with: data/learning/actual-track-name
+card_id: learning/track-name        # Logical ID — NEVER prefix with `data/`. Replace with: learning/actual-track-name
 card_type: learning_track
 priority: high                     # high (actively in progress) | medium (started, stalled) | archive (complete)
 updated: null                      # YYYY-MM-DD

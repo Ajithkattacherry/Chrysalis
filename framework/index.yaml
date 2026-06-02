@@ -56,6 +56,14 @@ schemas:
       - "User Base & Geography"
       - "Profile-Aware Analysis"
   manifest_entry:
+    note: |
+      `id` is a LOGICAL identifier, not a filesystem path. Use `profile/me`,
+      `pipeline/<slug>`, or `learning/<slug>` — NEVER prefix with `data/`. The
+      `data/` layer is added by tools (e.g. generate_dashboard.py prepends it
+      when reading card files). A `data/` prefix in the manifest silently
+      drops the card from the dashboard and from every workflow that loads
+      cards by id. Same rule applies to `card_id:` and `linked_cards:` in
+      card front-matter.
     fields:
       - id
       - type

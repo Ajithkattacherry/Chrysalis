@@ -137,7 +137,7 @@ populated data/profile/me.md. Follow this exact structure:
 
 ```markdown
 ---
-card_id: data/profile/me
+card_id: profile/me                  # Logical ID — NEVER prefix with `data/`
 card_type: personal_profile
 priority: always_load
 updated: [today's date YYYY-MM-DD]
@@ -201,9 +201,12 @@ Wait for the user to confirm or request changes before finalizing.
 
 If the user confirms and has Claude Code available:
 - Write the final content to `data/profile/me.md`
-- Update `data/manifest.yaml`: set `updated` for the `data/profile/me` card to today's date
-  and update the summary to reflect the user's actual background
-- Commit with message: `"update: data/profile/me initial setup from resume"`
+- Update `data/manifest.yaml`: set `updated` for the `profile/me` card to today's date
+  and update the summary to reflect the user's actual background. The manifest
+  entry's `id:` field is always `profile/me` — never `data/profile/me`. The
+  dashboard generator and every workflow that loads cards expect logical IDs
+  without the `data/` prefix.
+- Commit with message: `"update: profile/me initial setup from resume"`
 - Push to GitHub
 
 ---

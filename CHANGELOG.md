@@ -11,6 +11,19 @@ All notable changes to Chrysalis are documented here. This project uses
 
 ---
 
+## [1.0.2] — 2026-06-02
+
+### Fixed
+- **Empty dashboard after onboarding.** Card templates (`framework/templates/pipeline-card.md`, `framework/templates/profile.md`) and the workflows that write the manifest (`onboarding-sweep.md`, `profile-setup.md`, `card-sync.md`) all documented `card_id: data/pipeline/<slug>` and `id: data/pipeline/<slug>`. The dashboard generator (`framework/tools/generate_dashboard.py`) skips any manifest entry whose `id` doesn't start with exactly `pipeline/` — so every newly created card was silently dropped. Fixed by stripping the `data/` prefix from all template / workflow examples and adding an explicit note in `framework/index.yaml → schemas.manifest_entry` and `CLAUDE.md → Card update rules` that IDs are logical, not filesystem paths. Existing user manifests (which already used the correct format) are unaffected.
+
+### Added
+- **`Onboard me` now runs the first Brief automatically.** New Step 4 in the `Onboard me` chain in `CLAUDE.md` fires the full Brief flow as soon as the onboarding sweep commits — validates plumbing end-to-end, populates `dashboard.html`, and surfaces the day-one next action without the user having to ask.
+
+### Notes
+- No `data/` schema changes. The fix is purely in the framework prose Claude reads to know what to write. Users on 1.0.0 / 1.0.1 with already-correct manifests need no migration; users whose Claude wrote `data/`-prefixed IDs should run a one-shot rewrite: `sed -i '' 's|id: data/pipeline/|id: pipeline/|g; s|id: data/profile/|id: profile/|g' data/manifest.yaml` and the equivalent for `card_id:` / `linked_cards:` in card front-matter.
+
+---
+
 ## [1.0.1] — 2026-06-02
 
 ### Added

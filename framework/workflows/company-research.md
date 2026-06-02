@@ -199,7 +199,7 @@ On user confirmation, write directly to the repo:
 - Add or update the entry in `data/manifest.yaml`:
 
 ```yaml
-  - id: data/pipeline/[company-name]
+  - id: pipeline/[company-name]        # NEVER prefix with `data/`
     type: company_pipeline
     stage: researching
     summary: "[One-line summary: product, stage, key signal]"
