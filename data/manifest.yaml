@@ -13,3 +13,199 @@ cards:
     updated: 2026-06-12
     next_action: null
     has_temp: false
+
+  # ── ACTIVE PIPELINE ──────────────────────────────────────────────────────────
+
+  - id: pipeline/apple-system-experience
+    type: company_pipeline
+    stage: interviewing
+    summary: "Apple — Software Engineer, System Experience (iOS/macOS). Round 2 interview Jun 15. Recruiter: Jennifer Huff. URGENT: prep needed."
+    priority: high
+    tags: [ios, macos, platform, big-tech]
+    updated: 2026-06-12
+    next_action: "Prep for Jun 15 interview — technical skills + work history"
+    has_temp: false
+
+  - id: pipeline/apple-media-applications
+    type: company_pipeline
+    stage: screening
+    summary: "Apple — Sr. Media Applications Engineer. Recruiter: Gaby Alvarez. Awaiting scheduling coordinator for first interview."
+    priority: high
+    tags: [ios, media, platform, big-tech]
+    updated: 2026-06-12
+    next_action: "Watch for scheduling coordinator outreach"
+    has_temp: false
+
+  - id: pipeline/doordash
+    type: company_pipeline
+    stage: interviewing
+    summary: "DoorDash — iOS Engineer. Jun 2 Zoom panel completed (4 rounds). Awaiting outcome."
+    priority: high
+    tags: [ios, marketplace, growth-tech]
+    updated: 2026-06-12
+    next_action: "Debrief Jun 2 panel + await outcome"
+    has_temp: false
+
+  - id: pipeline/adyen
+    type: company_pipeline
+    stage: interviewing
+    summary: "Adyen — Software Engineer II (iOS). Jun 10 phone interview completed. Awaiting next round."
+    priority: high
+    tags: [ios, fintech, payments]
+    updated: 2026-06-12
+    next_action: "Debrief + await next round scheduling"
+    has_temp: false
+
+  - id: pipeline/agoda
+    type: company_pipeline
+    stage: screening
+    summary: "Agoda — Mobile Staff/Lead iOS (Bangkok, relocation). Jun 10 recruiter call with Chrisnel Kaye De Luna. Awaiting next steps."
+    priority: high
+    tags: [ios, travel, marketplace]
+    updated: 2026-06-12
+    next_action: "Confirm Bangkok relocation intent + await next steps"
+    has_temp: false
+
+  - id: pipeline/southwest-airlines
+    type: company_pipeline
+    stage: interviewing
+    summary: "Southwest Airlines — Senior Mobile Developer (iOS) via Lorien Global. Jun 4 Teams interview completed. Awaiting outcome."
+    priority: high
+    tags: [ios, enterprise, travel]
+    updated: 2026-06-12
+    next_action: "Debrief Jun 4 interview + await outcome"
+    has_temp: false
+
+  - id: pipeline/crunchyroll
+    type: company_pipeline
+    stage: screening
+    summary: "Crunchyroll — iOS Engineer (TBD). Jun 30 call with Brian Stabile scheduled."
+    priority: medium
+    tags: [ios, media, streaming]
+    updated: 2026-06-12
+    next_action: "Research + prep for Jun 30 call"
+    has_temp: false
+
+  # ── APPLIED ──────────────────────────────────────────────────────────────────
+
+  - id: pipeline/pinterest
+    type: company_pipeline
+    stage: applied
+    summary: "Pinterest — Software Engineer, iOS (SF). Applied Jun 10 via Greenhouse. Referral from Agnal Kokkat."
+    priority: medium
+    tags: [ios, social, consumer]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/robinhood
+    type: company_pipeline
+    stage: applied
+    summary: "Robinhood — iOS Engineer. Applied Jun 11 via Greenhouse."
+    priority: medium
+    tags: [ios, fintech, consumer]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/fireblocks
+    type: company_pipeline
+    stage: applied
+    summary: "Fireblocks — iOS Engineer. Applied Jun 12 via Greenhouse."
+    priority: medium
+    tags: [ios, crypto, fintech, security]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/hatch
+    type: company_pipeline
+    stage: applied
+    summary: "Hatch — iOS Engineer (sleep/wellness). Applied Jun 9 via Greenhouse."
+    priority: medium
+    tags: [ios, consumer, health]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/included-health
+    type: company_pipeline
+    stage: applied
+    summary: "Included Health — Senior Software Engineer, Mobile. Applied Jun 9 via Lever."
+    priority: medium
+    tags: [ios, healthtech, mobile]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/jpmorgan-chase
+    type: company_pipeline
+    stage: applied
+    summary: "JPMorgan Chase — iOS Engineer. Applied Jun 9 via Oracle/Workday."
+    priority: medium
+    tags: [ios, fintech, enterprise, banking]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/turo
+    type: company_pipeline
+    stage: applied
+    summary: "Turo — iOS Engineer. Candidate account created Jun 8 via Workday."
+    priority: medium
+    tags: [ios, marketplace, travel, consumer]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/signify-health
+    type: company_pipeline
+    stage: applied
+    summary: "Signify Health (CVS Health) — Senior Compute Engineer, Apple Platforms & Automation. Applied Jun 9."
+    priority: medium
+    tags: [ios, healthtech, apple-platforms]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  - id: pipeline/speechify
+    type: company_pipeline
+    stage: applied
+    summary: "Speechify — iOS Engineer. Applied Jun 8 via Greenhouse."
+    priority: medium
+    tags: [ios, ai, consumer, accessibility]
+    updated: 2026-06-12
+    next_action: "Await recruiter response"
+    has_temp: false
+
+  # ── CLOSED ────────────────────────────────────────────────────────────────────
+
+  - id: pipeline/ramp
+    type: company_pipeline
+    stage: closed_lost
+    summary: "Ramp — Rejected Jun 10 (Ashby)."
+    priority: archive
+    tags: [ios, fintech]
+    updated: 2026-06-12
+    next_action: null
+    has_temp: false
+
+  - id: pipeline/accenture
+    type: company_pipeline
+    stage: closed_lost
+    summary: "Accenture — Rejected Jun 12 (Workday)."
+    priority: archive
+    tags: [ios, consulting, enterprise]
+    updated: 2026-06-12
+    next_action: null
+    has_temp: false
+
+  - id: pipeline/micro1
+    type: company_pipeline
+    stage: closed_lost
+    summary: "micro1 — AI interview rejection Jun 9."
+    priority: archive
+    tags: [ios, ai-matching]
+    updated: 2026-06-12
+    next_action: null
+    has_temp: false

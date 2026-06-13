@@ -1,0 +1,72 @@
+interviews:
+  - company: "Apple"
+    card_id: "pipeline/apple-system-experience"
+    round: "second_interview"
+    label: "Software Engineer, System Experience — Round 2 (Webex)"
+    start: "2026-06-15T11:00:00-07:00"
+    end: "2026-06-15T11:30:00-07:00"
+    interviewer: null
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
+
+  - company: "Apple"
+    card_id: "pipeline/apple-system-experience"
+    round: "hm"
+    label: "Software Engineer, System Experience — Round 1 (Webex, Kritarth)"
+    start: "2026-06-05T11:00:00-07:00"
+    end: "2026-06-05T11:30:00-07:00"
+    interviewer: "Kritarth"
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
+
+  - company: "DoorDash"
+    card_id: "pipeline/doordash"
+    round: "panel"
+    label: "Zoom Onsite — 4 rounds (Coding, Debugging, Architecture, HM Chat)"
+    start: "2026-06-02T10:00:00-07:00"
+    end: "2026-06-02T15:45:00-07:00"
+    interviewer: "Vince Chau, Dmytro Kasianchuk, Danial Zahid, Ashwin Balegar Swamy (HM)"
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
+
+  - company: "Adyen"
+    card_id: "pipeline/adyen"
+    round: "recruiter_screen"
+    label: "Software Engineer II (iOS) — Phone screen with Craig Boller"
+    start: "2026-06-10T11:00:00-07:00"
+    end: "2026-06-10T11:30:00-07:00"
+    interviewer: "Craig Boller"
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
+
+  - company: "Southwest Airlines"
+    card_id: "pipeline/southwest-airlines"
+    round: "hm"
+    label: "Lorien/SWA Interview — Teams with Brian Odisho + Keven Valdez"
+    start: "2026-06-04T13:00:00-07:00"
+    end: "2026-06-04T14:00:00-07:00"
+    interviewer: "Brian Odisho, Keven Valdez"
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
+
+  - company: "Agoda"
+    card_id: "pipeline/agoda"
+    round: "recruiter_screen"
+    label: "Tech Roles Hiring call — Chrisnel Kaye De Luna (CieloTalent)"
+    start: "2026-06-10T18:30:00-07:00"
+    end: "2026-06-10T19:00:00-07:00"
+    interviewer: "Chrisnel Kaye De Luna"
+    prep_block_created: false
+    debrief_block_created: false
+    debrief_logged: false
+    outcome: pending
