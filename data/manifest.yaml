@@ -1,0 +1,15 @@
+# Chrysalis — Card Manifest
+# Source of truth for all cards in the knowledge base.
+# id: is always a LOGICAL identifier — never prefix with data/
+# Tools and workflows add the data/ filesystem layer themselves.
+
+cards:
+  - id: profile/me
+    type: profile
+    stage: active
+    summary: "Senior iOS Engineer, 14+ yrs experience. Intuit Core Platform Identity (FIDO2, OAuth, SSO, 10M+ users). Targeting Senior/Staff iOS roles. Actively interviewing."
+    priority: always_load
+    tags: [profile]
+    updated: 2026-06-12
+    next_action: null
+    has_temp: false
