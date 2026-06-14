@@ -19,11 +19,11 @@ cards:
   - id: pipeline/apple-system-experience
     type: company_pipeline
     stage: interviewing
-    summary: "Apple — Software Engineer, System Experience (iOS/macOS). Round 2 interview Jun 15. Recruiter: Jennifer Huff. URGENT: prep needed."
+    summary: "Apple — Software Engineer, System Experience (iOS/macOS). Round 1 interview Jun 15 11AM. Prep complete. Debrief same day."
     priority: high
     tags: [ios, macos, platform, big-tech]
-    updated: 2026-06-12
-    next_action: "Prep for Jun 15 interview — technical skills + work history"
+    updated: 2026-06-14
+    next_action: "Debrief immediately after Jun 15 interview"
     has_temp: false
 
   - id: pipeline/apple-media-applications
